@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <rss version="2.0">
+    <channel>
+        <title>My Portfolio</title>
+        <link>https://portfolio-blog-starter.vercel.app</link>
+        <description>This is my portfolio RSS feed</description>
+        <item>
+          <title>Reverse Midas Touch</title>
+          <link>https://portfolio-blog-starter.vercel.app/blog/reverse-midas-touch</link>
+          <description></description>
+          <pubDate>Thu, 03 Apr 2025 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>In the AI world, solve one thing neatly.</title>
+          <link>https://portfolio-blog-starter.vercel.app/blog/one_thing_ai_success</link>
+          <description></description>
+          <pubDate>Thu, 27 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>Suckerpunch: Surviving the Unsolvable</title>
+          <link>https://portfolio-blog-starter.vercel.app/blog/suckerpunch</link>
+          <description></description>
+          <pubDate>Tue, 11 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>AI Efficiency II: Pruning and Sparsity</title>
+          <link>https://portfolio-blog-starter.vercel.app/blog/2_ai_efficiency_pruning_sparsity</link>
+          <description></description>
+          <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>The places I loved in the US</title>
+          <link>https://portfolio-blog-starter.vercel.app/blog/fav_spots_in_the_us</link>
+          <description></description>
+          <pubDate>Thu, 12 Dec 2024 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>AI Efficiency I: An introduction</title>
+          <link>https://portfolio-blog-starter.vercel.app/blog/1_introduction_to_ai_efficiency</link>
+          <description></description>
+          <pubDate>Wed, 10 Jan 2024 00:00:00 GMT</pubDate>
+        </item>
+<item>
+          <title>NLP: Text Classification and Language Modelling</title>
+          <link>https://portfolio-blog-starter.vercel.app/blog/nlp</link>
+          <description></description>
+          <pubDate>Tue, 02 Jan 2024 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+  </rss>
