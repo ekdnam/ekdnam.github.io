@@ -7,6 +7,20 @@ export default function Page() {
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         ekdnam
       </h1>
+      <div className="mb-8 flex">
+        <div className="w-full">
+          <Image
+            src="/images/about/20241130_131045.jpg"
+            alt="Profile picture"
+            className="rounded-lg w-full"
+            sizes="100vw"
+            priority
+            width={1200}
+            height={1200}
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
+      </div>
       <p className="mb-4">
         I'm a solo AI engineer at <a href="https://getnerdio.com/press/nerdio-secures-series-c-investment-from-general-atlantic/" className="underline">unicorn</a> <a href="https://getnerdio.com" target="_blank" rel="noopener noreferrer" className="underline"><em>Nerdio</em></a>. 
         I shippesd <em>AssistPro</em> (<a href="https://www.forbes.com/sites/adrianbridgwater/2024/04/02/the-rise-of-infused-lower-level-ai/" rel="noopener noreferrer" className="underline">Forbes-mentioned</a>) 
@@ -20,20 +34,6 @@ export default function Page() {
       </p>
       <div className="my-8">
         <BlogPosts />
-      </div>
-      <div className="mb-8 flex">
-        <div className="w-full">
-          <Image
-            src="/images/about/me.jpg"
-            alt="Profile picture"
-            className="rounded-lg w-full"
-            sizes="100vw"
-            priority
-            width={1200}
-            height={1200}
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
       </div>
     </section>
   );
