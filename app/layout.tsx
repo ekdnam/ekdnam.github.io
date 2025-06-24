@@ -15,6 +15,15 @@ export const metadata: Metadata = {
     template: '%s | ekdnam',
   },
   description: 'ekdnam\'s musings',
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/icon.png',
+    },
+  },
   openGraph: {
     title: 'ekdnam',
     description: 'ekdnam\'s musings',
