@@ -1,8 +1,11 @@
 import { ImageResponse } from 'next/og'
 
+// This config enables static generation for this route
+export const dynamic = 'force-static';
+
 export function GET(request: Request) {
-  let url = new URL(request.url)
-  let title = url.searchParams.get('title') || 'Next.js Portfolio Starter'
+  // Use a default title since we can't rely on request.url in static export
+  const title = 'Next.js Portfolio Starter';
 
   return new ImageResponse(
     (
