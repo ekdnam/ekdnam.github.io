@@ -9,7 +9,7 @@ The  pursuit of accuracy in modern AI, particularly with the advent of Large Lan
 
 As models balloon in parameter count, so too does their memory footprint. Storing these massive models on disk is one challenge, but the real bottleneck emerges during inference and training. GPU memory, while expanding, has not kept pace with parameter proliferation. This requires constant data movement between High Bandwidth Memory (HBM) and on-chip SRAM, a process notoriously power-hungry. Horowitz (2014)<sup>1</sup> highlights this: energy expenditure for data movement can dwarf that of computation itself, especially across memory hierarchies. This <em>memory wall</em> (or perhaps, more accurately, <em>memory power draw</em>) threatens to make continued scaling economically and environmentally unsustainable.
 
-<img src="/images/efficiency/2_pruning/1_memory_power_consumption.png" alt="Memory Power Consumption" />
+<img src="/blog-website/images/efficiency/2_pruning/1_memory_power_consumption.png" alt="Memory Power Consumption" />
 
 <sub>(Image from 2)</sub>
 
@@ -37,7 +37,7 @@ Pruning can be broadly categorized by the granularity at which weights are remov
 
 **Synapse Pruning**: Synapse pruning, conversely, targets individual connections (weights) between neurons. Weights with magnitudes below a certain threshold are set to zero. This induces sparsity at a finer granularity, potentially preserving more of the network's representational capacity compared to aggressive neuron pruning. Synapse pruning can lead to unstructured sparsity (individual weights zeroed out) or structured sparsity (patterns of zeros enforced, as discussed later).
 
-<img src="/images/efficiency/2_pruning/2_pruning_neurons_synapses.png" alt="Pruning Neurons vs. Synapses" />
+<img src="/blog-website/images/efficiency/2_pruning/2_pruning_neurons_synapses.png" alt="Pruning Neurons vs. Synapses" />
 
 <sub>(Image from 3)</sub>
 
@@ -63,7 +63,7 @@ Beyond neuron vs. synapse, pruning can be further categorized by granularity, pa
 
 **Channel-based Pruning**: Specifically for CNNs, removes entire channels (feature maps). This is often considered more structurally sound for CNNs as channels represent distinct features. Channel pruning can be seen as a form of neuron pruning at the feature map level.
 
-<img src="/images/efficiency/2_pruning/6_pruning_granularities.png" alt="Pruning Granularities" />
+<img src="/blog-website/images/efficiency/2_pruning/6_pruning_granularities.png" alt="Pruning Granularities" />
 
 <sub>(Image from 2)</sub>
 
@@ -73,13 +73,13 @@ The choice of pruning granularity involves trade-offs between compression ratio,
 
 NVIDIA's Ampere and Hopper architectures [<sup>5</sup>, <sup>6</sup>] have brought structured sparsity to the forefront of hardware-accelerated AI inference. Their Tensor Cores, starting from the Ampere generation, leverage 2:4 structured sparsity to achieve up to 2x throughput gains while maintaining accuracy for matrix multiplications.
 
-<img src="/images/efficiency/2_pruning/4_nvidia_sparsity_diagram.jpg" alt="NVIDIA Sparsity Diagram" />
+<img src="/blog-website/images/efficiency/2_pruning/4_nvidia_sparsity_diagram.jpg" alt="NVIDIA Sparsity Diagram" />
 
 <sub>(Image from 4)</sub>
 
 ## Structured Sparsity: 2:4 Pattern
 
-<img src="/images/efficiency/2_pruning/5_structured_sparsity_pattern.png" alt="Structured Sparsity Pattern" />
+<img src="/blog-website/images/efficiency/2_pruning/5_structured_sparsity_pattern.png" alt="Structured Sparsity Pattern" />
 
 <sub>(Image from 5)</sub>
 
@@ -87,7 +87,7 @@ NVIDIA's sparse Tensor Cores are optimized for 2:4 sparsity. This requires that 
 
 The performance gain arises because Sparse Tensor Cores operate only on the non-zero values. The metadata guides the hardware to fetch only the necessary corresponding values from the dense operand in a matrix multiplication, effectively skipping computations involving zeros <sup>6</sup>. For 2x sparsity, this can, ideally, halve the computation time for matrix multiplications, a core operation in deep learning.
 
-<img src="/images/efficiency/2_pruning/7_dense_sparse_matrix_nvidia.png" alt="Dense Sparse Matrix NVIDIA" />
+<img src="/blog-website/images/efficiency/2_pruning/7_dense_sparse_matrix_nvidia.png" alt="Dense Sparse Matrix NVIDIA" />
 
 <sub>(Image from 7)</sub>
 
@@ -109,7 +109,7 @@ The intuition is that weights with smaller absolute values contribute less to th
 
 The simplest form, where individual weights below a threshold are zeroed out.
 
-<img src="/images/efficiency/2_pruning/8_element_pruning.png" alt="Element Pruning" />
+<img src="/blog-website/images/efficiency/2_pruning/8_element_pruning.png" alt="Element Pruning" />
 <sub>(Image from 2)</sub>
 
 ### Structural Pruning with Norms
