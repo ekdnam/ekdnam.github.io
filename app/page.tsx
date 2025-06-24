@@ -10,7 +10,8 @@ export default function Page() {
       <div className="mb-8 flex">
         <div className="w-full">
           <Image
-            src="/blog-website/images/about/20241130_131045.jpg"
+            // src="/blog-website/images/about/20241130_131045.jpg"
+            src="/images/about/20241130_131045.jpg"
             alt="Profile picture"
             className="rounded-lg w-full"
             sizes="100vw"
