@@ -4,9 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "predeploy": "next build",
-    "deploy": "gh-pages -d out"
+    "start": "next start"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.10",
@@ -28,8 +26,5 @@
     "sugar-high": "^0.6.0",
     "tailwindcss": "^4.1.10",
     "typescript": "5.3.3"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
