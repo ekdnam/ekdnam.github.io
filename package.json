@@ -1,6 +1,6 @@
 {
   "private": true,
-  "homepage": "https://ekdnam.github.io/blog-website",
+  "homepage": "https://ekdnam.github.io",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
