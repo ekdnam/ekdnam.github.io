@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 export function GET(request: Request) {
   // Use a default title since we can't rely on request.url in static export
-  const title = 'Aditya Mandke';
+  const title = 'ekdnam';
 
   return new ImageResponse(
     (
